@@ -23,7 +23,7 @@ public class ValidationResult {
     private boolean hasErrors;
     private List<RuleValidationResult> ruleValidationResults;
 
-    public boolean isHasErrors() {
+    public boolean getHasErrors() {
         return hasErrors;
     }
 
