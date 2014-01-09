@@ -10,14 +10,14 @@ While writing Java projects, I noticed that the frameworks build around JSR-303 
 
  - Setting a rule for one ~~property~~ field against other ~~properties~~ fields (e.g. Cell phone is required if home phone is null).
  - Application of different sets of validation rules for different object states (this is arguable, but sometimes necessary).
- - Decoupling validation rules from object definition, successfully achiving a ~~POCO~~ POJO.  
+ - Decoupling validation rules from object definition, successfully achieving a ~~POCO~~ POJO.
 
 ## Build  
 Planning to create a gradle build file for dependencies. Feel free to create one and make a pull request ;) 
  
 ## Usage  
 
-There will be two usage scenarios for AbstractValidatiors. Creating a validation class or using an InlineValidator instance.
+There will be two usage scenarios for AbstractValidators. Creating a validation class or using an InlineValidator instance.
 
 ### Creating a validation class  
 Suppose that we have a Merchant business object;
