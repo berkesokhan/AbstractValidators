@@ -45,20 +45,27 @@ public abstract class ValidationRules<TValidatedType> {
      * rendering useless our any intended type detection algorithms...
      */
     public IntegerRule check(int propertyValue) {
+
         return (IntegerRule) addRule(new IntegerRule(propertyValue));
+
     }
 
     public LongRule check(long propertyValue) {
+
         return (LongRule) addRule(new LongRule(propertyValue));
+
     }
 
     public StringRule check(String propertyValue) {
+
         return (StringRule) addRule(new StringRule(propertyValue));
+
     }
 
     public abstract void setRules();
 
     public ValidationResult validate(TValidatedType validatedObject) {
+
         this.validatedObject = validatedObject;
         this.setRules();
 
@@ -67,6 +74,7 @@ public abstract class ValidationRules<TValidatedType> {
         boolean hasErrors = false;
 
         for (Rule rule : getRulesList()) {
+
             RuleValidationResult ruleValidationResult = rule.validate();
             ruleValidationResults.add(ruleValidationResult);
             if (ruleValidationResult.getHasErrors()) {
@@ -77,6 +85,5 @@ public abstract class ValidationRules<TValidatedType> {
 
         return new ValidationResult(hasErrors, ruleValidationResults);
     }
-
 
 }
