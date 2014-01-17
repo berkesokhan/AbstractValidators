@@ -1,4 +1,4 @@
-# Abstract Validators
+# Abstract Validators   [![Build Status](https://travis-ci.org/berkesokhan/AbstractValidators.png?branch=master)](https://travis-ci.org/berkesokhan/AbstractValidators)
 
 ## Introduction
 Abstract Validators project is a business object validation framework in Java with a more fluent approach then the prevailing JSR-303 Bean Validation standard. 
