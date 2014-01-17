@@ -16,7 +16,6 @@
 
 package com.sokhan.abstractvalidators.rules;
 
-import com.sokhan.abstractvalidators.rules.LongRule;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;

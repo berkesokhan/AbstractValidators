@@ -23,10 +23,12 @@ public class InlineValidator<TValidatedType> extends ValidationRules<TValidatedT
     public ValidationResult validate() {
 
         validationRules = new ValidationRules<TValidatedType>() {
+
             @Override
             public void setRules() {
 
             }
+
         };
 
         return null;

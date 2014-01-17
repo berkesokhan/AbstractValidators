@@ -14,15 +14,9 @@
 //
 // The latest version of this file can be found at http://github.com/berkesokhan/abstractvalidators
 
-package com.sokhan.abstractvalidators;
+package com.sokhan.abstractvalidators.rules;
 
-import com.sokhan.abstractvalidators.domain.Merchant;
-import org.junit.Test;
-
-import static org.junit.Assert.assertFalse;
-
-public class InlineValidatorTests {
-
+public class RuleTests {
 
 
 }

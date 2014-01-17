@@ -14,10 +14,24 @@
 //
 // The latest version of this file can be found at http://github.com/berkesokhan/abstractvalidators
 
-
 package com.sokhan.abstractvalidators.rules;
 
-public class RuleTests {
+import org.junit.Test;
 
+import static org.junit.Assert.assertTrue;
+
+public class StringRuleTests {
+
+    @Test
+    public void validateUnitShouldReturnTrueForIsNumericWithNumericValue(){
+
+        String numericStringValue = "12345";
+
+        StringRule stringRule = new StringRule(numericStringValue);
+        boolean result = stringRule.isNumeric().validateUnit();
+
+        assertTrue(result);
+
+    }
 
 }

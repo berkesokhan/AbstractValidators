@@ -25,7 +25,9 @@ public class LongRule extends Rule {
     }
 
     public LongRule(long propertyValue) {
+
         this.propertyValue = propertyValue;
+
     }
 
     @Override
@@ -34,18 +36,24 @@ public class LongRule extends Rule {
     }
 
     public LongRule isGreaterThanZero() {
+
         basicResult = this.getPropertyValue() > 0;
         return this;
+
     }
 
     public LongRule isBetweenIncluding(long start, long end) {
+
         basicResult = this.getPropertyValue() >= start && this.getPropertyValue() <= end;
         return this;
+
     }
 
     public LongRule isBetweenExcluding(long start, long end) {
+
         basicResult = this.getPropertyValue() > start && this.getPropertyValue() < end;
         return this;
+
     }
 }
 

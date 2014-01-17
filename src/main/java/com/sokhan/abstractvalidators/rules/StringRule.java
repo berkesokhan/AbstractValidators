@@ -24,12 +24,16 @@ public class StringRule extends Rule {
     private String propertyValue;
 
     public StringRule(String propertyValue) {
+
         this.propertyValue = propertyValue;
+
     }
 
     @Override
     public boolean validateUnit() {
+
         return this.basicResult;
+
     }
 
 

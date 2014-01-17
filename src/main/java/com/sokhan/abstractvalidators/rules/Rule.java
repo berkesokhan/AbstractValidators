@@ -31,13 +31,17 @@ public abstract class Rule {
     protected String errorMessage;
 
     public Rule when(boolean condition) {
+
         this.whenResult = condition;
         return this;
+
     }
 
     public Rule withMessage(String errorMessage) {
+
         this.errorMessage = errorMessage;
         return this;
+
     }
 
     public abstract boolean validateUnit();
@@ -45,7 +49,9 @@ public abstract class Rule {
     public RuleValidationResult validate() {
 
         if ((this.whenResult && this.validateUnit()) || (!this.whenResult)) {
+
            return new RuleValidationResult(false, null);
+
         }
 
         return new RuleValidationResult(true, this.errorMessage);

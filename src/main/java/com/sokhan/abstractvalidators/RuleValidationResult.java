@@ -22,8 +22,10 @@ public class RuleValidationResult {
     private boolean hasErrors;
 
     public RuleValidationResult(boolean hasErrors, String message){
+
         this.hasErrors = hasErrors;
         this.message = message;
+
     }
 
     public String getMessage() {
