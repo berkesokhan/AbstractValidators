@@ -18,6 +18,7 @@ package com.sokhan.abstractvalidators.rules;
 
 import java.text.NumberFormat;
 import java.text.ParsePosition;
+import java.util.regex.Pattern;
 
 public class StringRule extends Rule {
 
@@ -43,6 +44,37 @@ public class StringRule extends Rule {
         ParsePosition parsePosition = new ParsePosition(0);
         numberFormat.parse(this.propertyValue, parsePosition);
         this.basicResult = this.propertyValue.length() == parsePosition.getIndex();
+
+        return this;
+
+    }
+
+    public StringRule shorterOrHasEqualLengthThan(int length) {
+
+        this.basicResult = this.propertyValue.length() <= length;
+
+        return this;
+    }
+
+    public StringRule lengthIsBetweenInclusive(int minLength, int maxLength) {
+
+        this.basicResult = (this.propertyValue.length() >= minLength) && (this.propertyValue.length() <= maxLength);
+
+        return this;
+
+    }
+
+    public StringRule isNotNullOrEmpty() {
+
+        this.basicResult = (this.propertyValue != null) && (this.propertyValue.length() > 0);
+
+        return this;
+    }
+
+    public StringRule matchesRegex(String regex) {
+
+        // TODO: Performance-wise bad. Design a better performed implementation!
+        this.basicResult = Pattern.compile(regex, Pattern.UNICODE_CASE).matcher(this.propertyValue).find();
 
         return this;
 
