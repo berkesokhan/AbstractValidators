@@ -73,7 +73,7 @@ public class StringRule extends Rule {
 
     public StringRule matchesRegex(String regex) {
 
-        // TODO: Performance-wise bad. Design a better performed implementation!
+        // TODO: Design a better performing implementation!
         this.basicResult = Pattern.compile(regex, Pattern.UNICODE_CASE).matcher(this.propertyValue).find();
 
         return this;

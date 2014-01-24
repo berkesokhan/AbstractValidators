@@ -12,8 +12,14 @@ While writing Java projects, I noticed that the frameworks build around JSR-303 
  - Application of different sets of validation rules for different object states (this is arguable, but sometimes necessary).
  - Decoupling validation rules from object definition, successfully achieving a ~~POCO~~ POJO.
 
+ So I want to explore a more fluent approach to solve these shortcomings much like [FluentValidation](http://fluentvalidation.codeplex.com/wikipage?title=CreatingAValidator&referringTitle=Documentation&ANCHOR#Chaining) and [SpecExpress](http://specexpress.codeplex.com/wikipage?title=Specifications&referringTitle=Documentation) projects but in Java.
+
 ## Build  
-Planning to create a gradle build file for dependencies. Feel free to create one and make a pull request ;) 
+At the root of the project enter
+
+    gradle build
+
+at the command line for building.
  
 ## Usage  
 
